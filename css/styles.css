@@ -94,8 +94,23 @@ body {
 .header {
   background-color: var(--banner-color);
 }
+
 .studio {
   color: var(--title-color);
+}
+.header-list {
+  display: flex;
+}
+.header-list .header-item {
+  margin-right: 40px;
+}
+.header-list .header-item + .header-item {
+  margin-left: 40px;
+}
+.header-list .header-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .header-link {
   font-weight: 600;
@@ -108,7 +123,9 @@ body {
 .header-link:focus {
   color: var(--accent-color);
 }
-
+.header-contacts {
+  
+}
 .header-email:hover,
 .header-email:focus {
   color: var(--accent-color);
