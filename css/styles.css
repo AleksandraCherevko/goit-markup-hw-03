@@ -133,9 +133,6 @@ img {
 }
 .header-logo {
   margin-right: 76px;
-  margin-left: 157px;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .header-link {
   font-weight: 600;
@@ -151,8 +148,12 @@ img {
 .header-contacts {
   display: flex;
   gap: 40px;
+}
+.header-email,
+.header-telephon {
   padding-top: 24px;
   padding-bottom: 24px;
+  display: block;
 }
 .header-email:hover,
 .header-email:focus {
@@ -171,9 +172,6 @@ img {
   text-align: center;
 }
 .slogan-banner {
-  padding-top: 188px;
-  padding-right: 473px;
-  padding-left: 473px;
   margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
@@ -185,7 +183,6 @@ img {
 .slogan-button {
   color: var(--banner-color);
   background-color: var(--accent-color);
-  margin-bottom: 188px;
 }
 
 .slogan-button:hover,
@@ -196,13 +193,13 @@ img {
 
 /*-----SKILLS--------*/
 .skills {
+  padding-top: 120px;
+  padding-bottom: 120px;
   background-color: var(--banner-color);
 }
 .skills-list {
   display: flex;
-  column-gap: 24px;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  gap: 24px;
 }
 .skills-after-title {
   margin-top: 0;
@@ -216,6 +213,10 @@ img {
 .skills-description {
   color: var(--text-color);
   margin-top: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 /*-----WORKS CARDS--------*/
 
@@ -225,11 +226,10 @@ img {
 }
 
 .works-list {
+  margin-top: 120px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
-  padding-top: 72px;
-  padding-bottom: 120px;
 }
 
 .works-item {
@@ -238,11 +238,12 @@ img {
 /*-----TEAM--------*/
 .team {
   background-color: var(--logo-color);
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .team-members {
-  padding-top: 120px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 .team-members-list {
   padding: 0;
@@ -255,21 +256,22 @@ img {
 .team-members-list > .team-members-item {
   flex-basis: calc(100% / 4 - 24px);
   margin-left: var(--card-set-gap);
-  margin-top: 72px;
-  margin-bottom: 120px;
 }
 .team-members-item {
   border: 1px solid #e7e9fc;
 }
 
 .team-members-name {
-  margin-top: 32px;
   margin-bottom: 8px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
+}
+.team-members-photo {
+  display: block;
+  max-width: 100%;
 }
 .team-members-position {
   text-align: center;
@@ -282,22 +284,18 @@ img {
 
 .team-card-content {
   padding-top: 32px;
-  padding-right: 65px;
   padding-bottom: 32px;
-  padding-left: 65px;
 }
 
 /*-----FOOTER--------*/
 .footer {
   background-color: var(--title-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-styles {
   display: flexbox;
-  padding-top: 100px;
-  padding-right: -1020px;
-  padding-bottom: 100px;
-  padding-left: 156px;
 }
 
 .footter-studio {
@@ -312,6 +310,8 @@ img {
 
 /*----PORTFOLIO-BUTTONS----*/
 .buttons-styles {
+  padding-top: 96px;
+  padding-bottom: 72px;
   display: flex;
   justify-content: center;
   gap: 24px;
@@ -322,8 +322,6 @@ img {
   color: var(--accent-color);
   background-color: var(--logo-color);
   border: 1px solid #e7e9fc;
-  margin-top: 96px;
-  margin-bottom: 72px;
   border-radius: 5px;
 }
 .portfolio-button:hover,
@@ -339,65 +337,31 @@ img {
 }
 /*----PORTFOLIO-IMAGES----*/
 
-.portfolio-images-item {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--title-color);
+.portfolio-images {
+  margin-bottom: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+.portfolio-images-list {
+  width: calc ((100% - 48px) / 3);
+  border: 0.5px solid #e7e9fc;
 }
 
 .portfolio-images-work {
+  padding-bottom: 32px;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
   color: var(--text-color);
 }
 
 .portfolio-images-title {
   padding-top: 32px;
-  padding-bottom: 64px;
+  padding-bottom: 8px;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-color);
-}
-.portfolio-images > .portfolio-images-item {
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: var(--card-set-gap);
-  padding-right: var(--card-set-gap);
-}
-.portfolio-images-work {
-  padding-top: 8px;
-  padding-bottom: 32px;
-}
-/*----PORTFOLIO-CARDS----*/
-
-.portfolio-images {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -24px;
-  margin-top: -48px;
-  margin-bottom: 120px;
-}
-.card-thumb {
-  margin-bottom: -10%;
-}
-
-.portfolio-images > .portfolio-images-list {
-  flex-basis: calc(100% / 3 - 24px);
-  margin-left: var(--card-set-gap);
-  margin-top: 48px;
-}
-
-.card-content {
-  padding-top: 32px;
-  padding-right: 54px;
-  padding-bottom: 64px;
-  padding-left: 16px;
-  border: 1px solid #e7e9fc;
-}
-.portfolio-images-title {
-  margin-top: 32px;
 }
