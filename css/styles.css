@@ -102,7 +102,7 @@ ul {
   margin: 0;
   padding-left: 0;
 }
-.img {
+img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -113,31 +113,27 @@ ul {
 
 .header {
   background-color: var(--banner-color);
+  border: 1px solid #e7e9fc;
 }
-.container-nav {
+.header > .container {
   display: flex;
 }
-.navigation-styles {
+.header-navigation {
   display: flex;
-}
-.header-contacts-styles {
-  display: flex;
-  justify-content: space-between;
-}
-.studio {
-  color: var(--title-color);
+  align-items: center;
+  margin-right: auto;
 }
 .header-list {
   display: flex;
+  gap: 40px;
 }
-.header-list .header-item {
-  margin-right: 40px;
+
+.studio {
+  color: var(--title-color);
 }
-.header-list .header-item + .header-item {
-  margin-left: 40px;
-}
-.header-list .header-link {
-  display: block;
+.header-logo {
+  margin-right: 76px;
+  margin-left: 157px;
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -152,7 +148,12 @@ ul {
 .header-link:focus {
   color: var(--accent-color);
 }
-
+.header-contacts {
+  display: flex;
+  gap: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 .header-email:hover,
 .header-email:focus {
   color: var(--accent-color);
@@ -170,8 +171,10 @@ ul {
   text-align: center;
 }
 .slogan-banner {
-  margin-top: 0;
-  margin-bottom: 57px;
+  padding-top: 188px;
+  padding-right: 473px;
+  padding-left: 473px;
+  margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.1;
@@ -182,6 +185,7 @@ ul {
 .slogan-button {
   color: var(--banner-color);
   background-color: var(--accent-color);
+  margin-bottom: 188px;
 }
 
 .slogan-button:hover,
@@ -193,6 +197,12 @@ ul {
 /*-----SKILLS--------*/
 .skills {
   background-color: var(--banner-color);
+}
+.skills-list {
+  display: flex;
+  column-gap: 24px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .skills-after-title {
   margin-top: 0;
@@ -206,17 +216,33 @@ ul {
 .skills-description {
   color: var(--text-color);
   margin-top: 0;
-  margin-bottom: 120px;
 }
-/*-----WORKS--------*/
+/*-----WORKS CARDS--------*/
 
 .works-list > .works-item {
   padding-top: 72px;
   padding-bottom: 120px;
 }
+
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  padding-top: 72px;
+  padding-bottom: 120px;
+}
+
+.works-item {
+  width: calc((100% - 72px) / 3);
+}
 /*-----TEAM--------*/
 .team {
   background-color: var(--logo-color);
+}
+
+.team-members {
+  padding-top: 120px;
+  padding-bottom: 72px;
 }
 .team-members-list {
   padding: 0;
@@ -227,16 +253,18 @@ ul {
   margin-top: -72px;
 }
 .team-members-list > .team-members-item {
-  
   flex-basis: calc(100% / 4 - 24px);
   margin-left: var(--card-set-gap);
   margin-top: 72px;
   margin-bottom: 120px;
 }
-.team-members-item * { outline: 1px solid green;}
+.team-members-item {
+  border: 1px solid #e7e9fc;
+}
 
 .team-members-name {
   margin-top: 32px;
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
@@ -244,7 +272,6 @@ ul {
   letter-spacing: 0.02em;
 }
 .team-members-position {
-  margin-top: 8px;
   text-align: center;
   color: var(--text-color);
 }
@@ -253,20 +280,24 @@ ul {
   background-color: var(--banner-color);
 }
 
+.team-card-content {
+  padding-top: 32px;
+  padding-right: 65px;
+  padding-bottom: 32px;
+  padding-left: 65px;
+}
+
 /*-----FOOTER--------*/
 .footer {
   background-color: var(--title-color);
 }
+
 .footer-styles {
-  display: inline-block;
+  display: flexbox;
   padding-top: 100px;
-  padding-right: 992px;
-  padding-bottom: 188px;
+  padding-right: -1020px;
+  padding-bottom: 100px;
   padding-left: 156px;
-  margin-bottom: 16px;
-}
-.footer-styles-text:nth-child(6n + 6) {
-  color: red;
 }
 
 .footter-studio {
@@ -274,6 +305,7 @@ ul {
 }
 .footer-text {
   color: var(--logo-color);
+  margin-top: 16px;
 }
 
 /*--------------------------PORTFOLIO---------------------*/
@@ -290,6 +322,7 @@ ul {
   color: var(--accent-color);
   background-color: var(--logo-color);
   border: 1px solid #e7e9fc;
+  margin-top: 96px;
   margin-bottom: 72px;
   border-radius: 5px;
 }
@@ -346,6 +379,7 @@ ul {
   flex-wrap: wrap;
   margin-left: -24px;
   margin-top: -48px;
+  margin-bottom: 120px;
 }
 .card-thumb {
   margin-bottom: -10%;
