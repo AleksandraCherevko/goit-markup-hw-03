@@ -217,7 +217,7 @@ img {
   gap: 24px;
 }
 .skills-item {
-  flex-basis: calc(100% / 4 - 24px);
+  flex-basis: calc((100% - 72px) / 4);
 }
 .skills-after-title {
   margin-top: 0;
