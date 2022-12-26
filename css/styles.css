@@ -169,22 +169,37 @@ img {
 
 .slogan {
   background-color: var(--title-color);
-  text-align: center;
 }
 .slogan-banner {
-  margin-bottom: 48px;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.1;
   letter-spacing: 0.02em;
   color: var(--banner-color);
   background-color: var(--title-color);
+  max-width: 496px;
+}
+.slogan-banner-style {
+  padding-top: 188px;
+  padding-bottom: 48px;
 }
 .slogan-button {
+  display: block;
+  padding-top: 16px;
+  padding-right: 32px;
+  padding-bottom: 16px;
+  padding-left: 32px;
   color: var(--banner-color);
   background-color: var(--accent-color);
+  border: 0;
+  border-radius: 4px;
 }
-
+.slogan-button-style {
+  padding-bottom: 204px;
+  display: flex;
+  justify-content: center;
+}
 .slogan-button:hover,
 .slogan-button:focus {
   color: var(--banner-color);
@@ -200,6 +215,9 @@ img {
 .skills-list {
   display: flex;
   gap: 24px;
+}
+.skills-item {
+  flex-basis: calc(100% / 4 - 24px);
 }
 .skills-after-title {
   margin-top: 0;
@@ -219,21 +237,21 @@ img {
   letter-spacing: 0.02em;
 }
 /*-----WORKS CARDS--------*/
-
-.works-list > .works-item {
+.works {
   padding-top: 72px;
   padding-bottom: 120px;
 }
 
 .works-list {
-  margin-top: 120px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
 }
 
 .works-item {
-  width: calc((100% - 72px) / 3);
+  width: calc((100% - 48px) / 3);
+  padding-top: 72px;
+  padding-bottom: 120px;
 }
 /*-----TEAM--------*/
 .team {
@@ -250,15 +268,11 @@ img {
   margin: 0;
   list-style: none;
   display: flex;
-  margin-left: -24px;
-  margin-top: -72px;
+  gap: 24px;
 }
-.team-members-list > .team-members-item {
-  flex-basis: calc(100% / 4 - 24px);
-  margin-left: var(--card-set-gap);
-}
+
 .team-members-item {
-  border: 1px solid #e7e9fc;
+  flex-basis: calc((100% - 72px) / 4);
 }
 
 .team-members-name {
@@ -309,8 +323,11 @@ img {
 /*--------------------------PORTFOLIO---------------------*/
 
 /*----PORTFOLIO-BUTTONS----*/
-.buttons-styles {
+.portfolio {
   padding-top: 96px;
+  padding-bottom: 120px;
+}
+.buttons-styles {
   padding-bottom: 72px;
   display: flex;
   justify-content: center;
@@ -329,16 +346,10 @@ img {
   color: var(--banner-color);
   background-color: var(--accent-color);
 }
-.potrfolio-button-list > .portfolio-button-items {
-  padding-top: 96px;
-  padding-bottom: 72px;
-  padding-left: 0;
-  padding-right: 24px;
-}
+
 /*----PORTFOLIO-IMAGES----*/
 
 .portfolio-images {
-  margin-bottom: 120px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
@@ -346,11 +357,9 @@ img {
 }
 .portfolio-images-list {
   width: calc ((100% - 48px) / 3);
-  border: 0.5px solid #e7e9fc;
 }
 
 .portfolio-images-work {
-  padding-bottom: 32px;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.02em;
@@ -358,10 +367,16 @@ img {
 }
 
 .portfolio-images-title {
-  padding-top: 32px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-color);
+}
+
+.card-content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border: 0.5px solid #e7e9fc;
 }
